@@ -1,3 +1,5 @@
+using System.Linq.Expressions;
+
 namespace Calculadora;
 
 public partial class Form1 : Form
@@ -7,123 +9,157 @@ public partial class Form1 : Form
         InitializeComponent();
     }
 
+    #region Enum
+    private enum Operacao
+    {
+        Subtracao,
+        Divisao,
+        Multiplicacao,
+        Soma
+    }
+
+    #endregion
+
+    #region Campos
+
+    private Operacao Operador { get; set; }
+    public decimal Resultado { get; set; }
+    public decimal Valor { get; set; }
+
+    #endregion
+
     #region Operações
-    private void porcentagem_Click(object sender, EventArgs e)
+    private void Porcentagem_Click(object sender, EventArgs e)
     {
-
+        if (!string.IsNullOrEmpty(console.Text))
+        {
+            decimal valorAtual = Convert.ToDecimal(console.Text);
+            console.Text = (Valor * valorAtual / 100).ToString();
+        }
+        console.Text = string.Empty;
     }
-
-    private void divisao_Click(object sender, EventArgs e)
+    private void Divisao_Click(object sender, EventArgs e)
     {
-
+        Operador = Operacao.Divisao;
+        Valor = Convert.ToDecimal(console.Text);
+        console.Text = string.Empty;
     }
-
-    private void multiplicacao_Click(object sender, EventArgs e)
+    private void Multiplicacao_Click(object sender, EventArgs e)
     {
-
+        Operador = Operacao.Multiplicacao;
+        Valor = Convert.ToDecimal(console.Text);
+        console.Text = string.Empty;
     }
-
-
-    private void subtracao_Click(object sender, EventArgs e)
+    private void Subtracao_Click(object sender, EventArgs e)
     {
-
+        Operador = Operacao.Subtracao;
+        Valor = Convert.ToDecimal(console.Text);
+        console.Text = string.Empty;
     }
-
-    private void soma_Click(object sender, EventArgs e)
+    private void Soma_Click(object sender, EventArgs e)
     {
-
+        Operador = Operacao.Soma;
+        Valor = Convert.ToDecimal(console.Text);
+        console.Text = string.Empty;
     }
 
     #endregion
 
     #region Funcionalidades
 
-    private void igual_Click(object sender, EventArgs e)
+    private void Igual_Click(object sender, EventArgs e)
     {
+        decimal valorAtual = Convert.ToDecimal(console.Text);
 
+        switch (Operador)
+        {
+            case Operacao.Soma:
+                Resultado = Valor + valorAtual;
+                break;
+            case Operacao.Divisao:
+                Resultado = Valor / valorAtual;
+                break;
+            case Operacao.Multiplicacao:
+                Resultado = Valor * valorAtual;
+                break;
+            case Operacao.Subtracao:
+                Resultado = Valor - valorAtual;
+                break;
+        }
+        console.Text = Resultado.ToString();
     }
-
-    private void clean_Click(object sender, EventArgs e)
+    private void Clean_Click(object sender, EventArgs e)
     {
         console.Text = string.Empty;
-    }
-
-    private void console_TextChanged(object sender, EventArgs e)
-    {
-
     }
 
     #endregion
 
     #region Números
-    private void zerozero_Click(object sender, EventArgs e)
+    private void Zerozero_Click(object sender, EventArgs e)
     {
         console.Text += "00";
     }
-    private void zero_Click(object sender, EventArgs e)
+    private void Zero_Click(object sender, EventArgs e)
     {
         console.Text += "0";
 
     }
-
-    private void um_Click(object sender, EventArgs e)
+    private void Um_Click(object sender, EventArgs e)
     {
         console.Text += "1";
 
     }
-
-    private void dois_Click(object sender, EventArgs e)
+    private void Dois_Click(object sender, EventArgs e)
     {
         console.Text += "2";
 
     }
-
-    private void tres_Click(object sender, EventArgs e)
+    private void Tres_Click(object sender, EventArgs e)
     {
         console.Text += "3";
 
     }
-
-    private void quatro_Click(object sender, EventArgs e)
+    private void Quatro_Click(object sender, EventArgs e)
     {
         console.Text += "4";
 
     }
-
-    private void cinco_Click(object sender, EventArgs e)
+    private void Cinco_Click(object sender, EventArgs e)
     {
         console.Text += "5";
 
     }
-
-    private void seis_Click(object sender, EventArgs e)
+    private void Seis_Click(object sender, EventArgs e)
     {
         console.Text += "6";
 
     }
-    private void sete_Click(object sender, EventArgs e)
+    private void Sete_Click(object sender, EventArgs e)
     {
         console.Text += "7";
 
     }
-
-    private void oito_Click(object sender, EventArgs e)
+    private void Oito_Click(object sender, EventArgs e)
     {
         console.Text += "8";
 
     }
-
-    private void nove_Click(object sender, EventArgs e)
+    private void Nove_Click(object sender, EventArgs e)
     {
         console.Text += "9";
 
     }
-    private void virgula_Click(object sender, EventArgs e)
+    private void Virgula_Click(object sender, EventArgs e)
     {
-        console.Text += ",";
-
+        if (console.Text.Length > 0 && !console.Text.Contains(','))
+            console.Text += ",";
     }
 
     #endregion
 
+    private void console_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }

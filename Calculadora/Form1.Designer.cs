@@ -58,14 +58,17 @@ partial class Form1
         porcentagem.TabIndex = 0;
         porcentagem.Text = "%";
         porcentagem.UseVisualStyleBackColor = true;
-        porcentagem.Click += porcentagem_Click;
+        porcentagem.Click += Porcentagem_Click;
         // 
         // console
         // 
-        console.Location = new Point(13, 12);
+        console.Font = new Font("Segoe UI", 30F);
+        console.Location = new Point(11, 32);
         console.Name = "console";
-        console.Size = new Size(289, 23);
+        console.ReadOnly = true;
+        console.Size = new Size(290, 61);
         console.TabIndex = 3;
+        console.TextAlign = HorizontalAlignment.Right;
         console.TextChanged += console_TextChanged;
         // 
         // clean
@@ -76,7 +79,7 @@ partial class Form1
         clean.TabIndex = 4;
         clean.Text = "c";
         clean.UseVisualStyleBackColor = true;
-        clean.Click += clean_Click;
+        clean.Click += Clean_Click;
         // 
         // divisao
         // 
@@ -86,7 +89,7 @@ partial class Form1
         divisao.TabIndex = 9;
         divisao.Text = "/";
         divisao.UseVisualStyleBackColor = true;
-        divisao.Click += divisao_Click;
+        divisao.Click += Divisao_Click;
         // 
         // nove
         // 
@@ -96,7 +99,7 @@ partial class Form1
         nove.TabIndex = 8;
         nove.Text = "9";
         nove.UseVisualStyleBackColor = true;
-        nove.Click += nove_Click;
+        nove.Click += Nove_Click;
         // 
         // oito
         // 
@@ -106,7 +109,7 @@ partial class Form1
         oito.TabIndex = 7;
         oito.Text = "8";
         oito.UseVisualStyleBackColor = true;
-        oito.Click += oito_Click;
+        oito.Click += Oito_Click;
         // 
         // sete
         // 
@@ -116,7 +119,7 @@ partial class Form1
         sete.TabIndex = 6;
         sete.Text = "7";
         sete.UseVisualStyleBackColor = true;
-        sete.Click += sete_Click;
+        sete.Click += Sete_Click;
         // 
         // multiplicacao
         // 
@@ -126,7 +129,7 @@ partial class Form1
         multiplicacao.TabIndex = 14;
         multiplicacao.Text = "x";
         multiplicacao.UseVisualStyleBackColor = true;
-        multiplicacao.Click += multiplicacao_Click;
+        multiplicacao.Click += Multiplicacao_Click;
         // 
         // seis
         // 
@@ -136,7 +139,7 @@ partial class Form1
         seis.TabIndex = 13;
         seis.Text = "6";
         seis.UseVisualStyleBackColor = true;
-        seis.Click += seis_Click;
+        seis.Click += Seis_Click;
         // 
         // cinco
         // 
@@ -146,7 +149,7 @@ partial class Form1
         cinco.TabIndex = 12;
         cinco.Text = "5";
         cinco.UseVisualStyleBackColor = true;
-        cinco.Click += cinco_Click;
+        cinco.Click += Cinco_Click;
         // 
         // quatro
         // 
@@ -156,7 +159,7 @@ partial class Form1
         quatro.TabIndex = 11;
         quatro.Text = "4";
         quatro.UseVisualStyleBackColor = true;
-        quatro.Click += quatro_Click;
+        quatro.Click += Quatro_Click;
         // 
         // igual
         // 
@@ -166,7 +169,7 @@ partial class Form1
         igual.TabIndex = 20;
         igual.Text = "=";
         igual.UseVisualStyleBackColor = true;
-        igual.Click += igual_Click;
+        igual.Click += Igual_Click;
         // 
         // soma
         // 
@@ -176,7 +179,7 @@ partial class Form1
         soma.TabIndex = 19;
         soma.Text = "+";
         soma.UseVisualStyleBackColor = true;
-        soma.Click += soma_Click;
+        soma.Click += Soma_Click;
         // 
         // tres
         // 
@@ -186,7 +189,7 @@ partial class Form1
         tres.TabIndex = 18;
         tres.Text = "3";
         tres.UseVisualStyleBackColor = true;
-        tres.Click += tres_Click;
+        tres.Click += Tres_Click;
         // 
         // dois
         // 
@@ -196,7 +199,7 @@ partial class Form1
         dois.TabIndex = 17;
         dois.Text = "2";
         dois.UseVisualStyleBackColor = true;
-        dois.Click += dois_Click;
+        dois.Click += Dois_Click;
         // 
         // um
         // 
@@ -206,7 +209,7 @@ partial class Form1
         um.TabIndex = 16;
         um.Text = "1";
         um.UseVisualStyleBackColor = true;
-        um.Click += um_Click;
+        um.Click += Um_Click;
         // 
         // subtracao
         // 
@@ -216,7 +219,7 @@ partial class Form1
         subtracao.TabIndex = 24;
         subtracao.Text = "-";
         subtracao.UseVisualStyleBackColor = true;
-        subtracao.Click += subtracao_Click;
+        subtracao.Click += Subtracao_Click;
         // 
         // zerozero
         // 
@@ -226,7 +229,7 @@ partial class Form1
         zerozero.TabIndex = 23;
         zerozero.Text = "00";
         zerozero.UseVisualStyleBackColor = true;
-        zerozero.Click += zerozero_Click;
+        zerozero.Click += Zerozero_Click;
         // 
         // zero
         // 
@@ -236,7 +239,7 @@ partial class Form1
         zero.TabIndex = 22;
         zero.Text = "0";
         zero.UseVisualStyleBackColor = true;
-        zero.Click += zero_Click;
+        zero.Click += Zero_Click;
         // 
         // virgula
         // 
@@ -246,7 +249,7 @@ partial class Form1
         virgula.TabIndex = 21;
         virgula.Text = ",";
         virgula.UseVisualStyleBackColor = true;
-        virgula.Click += virgula_Click;
+        virgula.Click += Virgula_Click;
         // 
         // Form1
         // 
