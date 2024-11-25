@@ -28,231 +28,251 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-        button1 = new Button();
-        textBox1 = new TextBox();
-        button4 = new Button();
-        button7 = new Button();
-        button8 = new Button();
-        button9 = new Button();
-        button10 = new Button();
-        button12 = new Button();
-        button13 = new Button();
-        button14 = new Button();
-        button15 = new Button();
-        button16 = new Button();
-        button17 = new Button();
-        button18 = new Button();
-        button19 = new Button();
-        button20 = new Button();
-        button22 = new Button();
-        button23 = new Button();
-        button24 = new Button();
-        button25 = new Button();
+        porcentagem = new Button();
+        console = new TextBox();
+        clean = new Button();
+        divisao = new Button();
+        nove = new Button();
+        oito = new Button();
+        sete = new Button();
+        multiplicacao = new Button();
+        seis = new Button();
+        cinco = new Button();
+        quatro = new Button();
+        igual = new Button();
+        soma = new Button();
+        tres = new Button();
+        dois = new Button();
+        um = new Button();
+        subtracao = new Button();
+        zerozero = new Button();
+        zero = new Button();
+        virgula = new Button();
         SuspendLayout();
         // 
-        // button1
+        // porcentagem
         // 
-        button1.Location = new Point(12, 122);
-        button1.Name = "button1";
-        button1.Size = new Size(68, 67);
-        button1.TabIndex = 0;
-        button1.Text = "%";
-        button1.UseVisualStyleBackColor = true;
+        porcentagem.Location = new Point(12, 122);
+        porcentagem.Name = "porcentagem";
+        porcentagem.Size = new Size(68, 67);
+        porcentagem.TabIndex = 0;
+        porcentagem.Text = "%";
+        porcentagem.UseVisualStyleBackColor = true;
+        porcentagem.Click += porcentagem_Click;
         // 
-        // textBox1
+        // console
         // 
-        textBox1.Location = new Point(13, 12);
-        textBox1.Name = "textBox1";
-        textBox1.Size = new Size(289, 23);
-        textBox1.TabIndex = 3;
+        console.Location = new Point(13, 12);
+        console.Name = "console";
+        console.Size = new Size(289, 23);
+        console.TabIndex = 3;
+        console.TextChanged += console_TextChanged;
         // 
-        // button4
+        // clean
         // 
-        button4.Location = new Point(234, 122);
-        button4.Name = "button4";
-        button4.Size = new Size(68, 67);
-        button4.TabIndex = 4;
-        button4.Text = "c";
-        button4.UseVisualStyleBackColor = true;
+        clean.Location = new Point(234, 122);
+        clean.Name = "clean";
+        clean.Size = new Size(68, 67);
+        clean.TabIndex = 4;
+        clean.Text = "c";
+        clean.UseVisualStyleBackColor = true;
+        clean.Click += clean_Click;
         // 
-        // button7
+        // divisao
         // 
-        button7.Location = new Point(86, 122);
-        button7.Name = "button7";
-        button7.Size = new Size(68, 67);
-        button7.TabIndex = 9;
-        button7.Text = "/";
-        button7.UseVisualStyleBackColor = true;
+        divisao.Location = new Point(86, 122);
+        divisao.Name = "divisao";
+        divisao.Size = new Size(68, 67);
+        divisao.TabIndex = 9;
+        divisao.Text = "/";
+        divisao.UseVisualStyleBackColor = true;
+        divisao.Click += divisao_Click;
         // 
-        // button8
+        // nove
         // 
-        button8.Location = new Point(160, 195);
-        button8.Name = "button8";
-        button8.Size = new Size(68, 67);
-        button8.TabIndex = 8;
-        button8.Text = "9";
-        button8.UseVisualStyleBackColor = true;
+        nove.Location = new Point(160, 195);
+        nove.Name = "nove";
+        nove.Size = new Size(68, 67);
+        nove.TabIndex = 8;
+        nove.Text = "9";
+        nove.UseVisualStyleBackColor = true;
+        nove.Click += nove_Click;
         // 
-        // button9
+        // oito
         // 
-        button9.Location = new Point(85, 195);
-        button9.Name = "button9";
-        button9.Size = new Size(68, 67);
-        button9.TabIndex = 7;
-        button9.Text = "8";
-        button9.UseVisualStyleBackColor = true;
+        oito.Location = new Point(85, 195);
+        oito.Name = "oito";
+        oito.Size = new Size(68, 67);
+        oito.TabIndex = 7;
+        oito.Text = "8";
+        oito.UseVisualStyleBackColor = true;
+        oito.Click += oito_Click;
         // 
-        // button10
+        // sete
         // 
-        button10.Location = new Point(11, 195);
-        button10.Name = "button10";
-        button10.Size = new Size(68, 67);
-        button10.TabIndex = 6;
-        button10.Text = "7";
-        button10.UseVisualStyleBackColor = true;
+        sete.Location = new Point(11, 195);
+        sete.Name = "sete";
+        sete.Size = new Size(68, 67);
+        sete.TabIndex = 6;
+        sete.Text = "7";
+        sete.UseVisualStyleBackColor = true;
+        sete.Click += sete_Click;
         // 
-        // button12
+        // multiplicacao
         // 
-        button12.Location = new Point(159, 122);
-        button12.Name = "button12";
-        button12.Size = new Size(68, 67);
-        button12.TabIndex = 14;
-        button12.Text = "x";
-        button12.UseVisualStyleBackColor = true;
+        multiplicacao.Location = new Point(159, 122);
+        multiplicacao.Name = "multiplicacao";
+        multiplicacao.Size = new Size(68, 67);
+        multiplicacao.TabIndex = 14;
+        multiplicacao.Text = "x";
+        multiplicacao.UseVisualStyleBackColor = true;
+        multiplicacao.Click += multiplicacao_Click;
         // 
-        // button13
+        // seis
         // 
-        button13.Location = new Point(160, 268);
-        button13.Name = "button13";
-        button13.Size = new Size(68, 67);
-        button13.TabIndex = 13;
-        button13.Text = "6";
-        button13.UseVisualStyleBackColor = true;
+        seis.Location = new Point(160, 268);
+        seis.Name = "seis";
+        seis.Size = new Size(68, 67);
+        seis.TabIndex = 13;
+        seis.Text = "6";
+        seis.UseVisualStyleBackColor = true;
+        seis.Click += seis_Click;
         // 
-        // button14
+        // cinco
         // 
-        button14.Location = new Point(86, 268);
-        button14.Name = "button14";
-        button14.Size = new Size(68, 67);
-        button14.TabIndex = 12;
-        button14.Text = "5";
-        button14.UseVisualStyleBackColor = true;
+        cinco.Location = new Point(86, 268);
+        cinco.Name = "cinco";
+        cinco.Size = new Size(68, 67);
+        cinco.TabIndex = 12;
+        cinco.Text = "5";
+        cinco.UseVisualStyleBackColor = true;
+        cinco.Click += cinco_Click;
         // 
-        // button15
+        // quatro
         // 
-        button15.Location = new Point(12, 268);
-        button15.Name = "button15";
-        button15.Size = new Size(68, 67);
-        button15.TabIndex = 11;
-        button15.Text = "4";
-        button15.UseVisualStyleBackColor = true;
+        quatro.Location = new Point(12, 268);
+        quatro.Name = "quatro";
+        quatro.Size = new Size(68, 67);
+        quatro.TabIndex = 11;
+        quatro.Text = "4";
+        quatro.UseVisualStyleBackColor = true;
+        quatro.Click += quatro_Click;
         // 
-        // button16
+        // igual
         // 
-        button16.Location = new Point(234, 341);
-        button16.Name = "button16";
-        button16.Size = new Size(68, 140);
-        button16.TabIndex = 20;
-        button16.Text = "=";
-        button16.UseVisualStyleBackColor = true;
+        igual.Location = new Point(234, 341);
+        igual.Name = "igual";
+        igual.Size = new Size(68, 140);
+        igual.TabIndex = 20;
+        igual.Text = "=";
+        igual.UseVisualStyleBackColor = true;
+        igual.Click += igual_Click;
         // 
-        // button17
+        // soma
         // 
-        button17.Location = new Point(233, 268);
-        button17.Name = "button17";
-        button17.Size = new Size(68, 67);
-        button17.TabIndex = 19;
-        button17.Text = "+";
-        button17.UseVisualStyleBackColor = true;
+        soma.Location = new Point(233, 268);
+        soma.Name = "soma";
+        soma.Size = new Size(68, 67);
+        soma.TabIndex = 19;
+        soma.Text = "+";
+        soma.UseVisualStyleBackColor = true;
+        soma.Click += soma_Click;
         // 
-        // button18
+        // tres
         // 
-        button18.Location = new Point(159, 341);
-        button18.Name = "button18";
-        button18.Size = new Size(68, 67);
-        button18.TabIndex = 18;
-        button18.Text = "3";
-        button18.UseVisualStyleBackColor = true;
+        tres.Location = new Point(159, 341);
+        tres.Name = "tres";
+        tres.Size = new Size(68, 67);
+        tres.TabIndex = 18;
+        tres.Text = "3";
+        tres.UseVisualStyleBackColor = true;
+        tres.Click += tres_Click;
         // 
-        // button19
+        // dois
         // 
-        button19.Location = new Point(85, 341);
-        button19.Name = "button19";
-        button19.Size = new Size(68, 67);
-        button19.TabIndex = 17;
-        button19.Text = "2";
-        button19.UseVisualStyleBackColor = true;
+        dois.Location = new Point(85, 341);
+        dois.Name = "dois";
+        dois.Size = new Size(68, 67);
+        dois.TabIndex = 17;
+        dois.Text = "2";
+        dois.UseVisualStyleBackColor = true;
+        dois.Click += dois_Click;
         // 
-        // button20
+        // um
         // 
-        button20.Location = new Point(11, 341);
-        button20.Name = "button20";
-        button20.Size = new Size(68, 67);
-        button20.TabIndex = 16;
-        button20.Text = "1";
-        button20.UseVisualStyleBackColor = true;
+        um.Location = new Point(11, 341);
+        um.Name = "um";
+        um.Size = new Size(68, 67);
+        um.TabIndex = 16;
+        um.Text = "1";
+        um.UseVisualStyleBackColor = true;
+        um.Click += um_Click;
         // 
-        // button22
+        // subtracao
         // 
-        button22.Location = new Point(234, 195);
-        button22.Name = "button22";
-        button22.Size = new Size(68, 67);
-        button22.TabIndex = 24;
-        button22.Text = "-";
-        button22.UseVisualStyleBackColor = true;
+        subtracao.Location = new Point(234, 195);
+        subtracao.Name = "subtracao";
+        subtracao.Size = new Size(68, 67);
+        subtracao.TabIndex = 24;
+        subtracao.Text = "-";
+        subtracao.UseVisualStyleBackColor = true;
+        subtracao.Click += subtracao_Click;
         // 
-        // button23
+        // zerozero
         // 
-        button23.Location = new Point(159, 414);
-        button23.Name = "button23";
-        button23.Size = new Size(68, 67);
-        button23.TabIndex = 23;
-        button23.Text = ".";
-        button23.UseVisualStyleBackColor = true;
+        zerozero.Location = new Point(159, 414);
+        zerozero.Name = "zerozero";
+        zerozero.Size = new Size(68, 67);
+        zerozero.TabIndex = 23;
+        zerozero.Text = "00";
+        zerozero.UseVisualStyleBackColor = true;
+        zerozero.Click += zerozero_Click;
         // 
-        // button24
+        // zero
         // 
-        button24.Location = new Point(85, 414);
-        button24.Name = "button24";
-        button24.Size = new Size(68, 67);
-        button24.TabIndex = 22;
-        button24.Text = "0";
-        button24.UseVisualStyleBackColor = true;
+        zero.Location = new Point(85, 414);
+        zero.Name = "zero";
+        zero.Size = new Size(68, 67);
+        zero.TabIndex = 22;
+        zero.Text = "0";
+        zero.UseVisualStyleBackColor = true;
+        zero.Click += zero_Click;
         // 
-        // button25
+        // virgula
         // 
-        button25.Location = new Point(11, 414);
-        button25.Name = "button25";
-        button25.Size = new Size(68, 67);
-        button25.TabIndex = 21;
-        button25.Text = ",";
-        button25.UseVisualStyleBackColor = true;
+        virgula.Location = new Point(11, 414);
+        virgula.Name = "virgula";
+        virgula.Size = new Size(68, 67);
+        virgula.TabIndex = 21;
+        virgula.Text = ",";
+        virgula.UseVisualStyleBackColor = true;
+        virgula.Click += virgula_Click;
         // 
         // Form1
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(316, 500);
-        Controls.Add(button22);
-        Controls.Add(button23);
-        Controls.Add(button24);
-        Controls.Add(button25);
-        Controls.Add(button16);
-        Controls.Add(button17);
-        Controls.Add(button18);
-        Controls.Add(button19);
-        Controls.Add(button20);
-        Controls.Add(button12);
-        Controls.Add(button13);
-        Controls.Add(button14);
-        Controls.Add(button15);
-        Controls.Add(button7);
-        Controls.Add(button8);
-        Controls.Add(button9);
-        Controls.Add(button10);
-        Controls.Add(button4);
-        Controls.Add(textBox1);
-        Controls.Add(button1);
+        Controls.Add(subtracao);
+        Controls.Add(zerozero);
+        Controls.Add(zero);
+        Controls.Add(virgula);
+        Controls.Add(igual);
+        Controls.Add(soma);
+        Controls.Add(tres);
+        Controls.Add(dois);
+        Controls.Add(um);
+        Controls.Add(multiplicacao);
+        Controls.Add(seis);
+        Controls.Add(cinco);
+        Controls.Add(quatro);
+        Controls.Add(divisao);
+        Controls.Add(nove);
+        Controls.Add(oito);
+        Controls.Add(sete);
+        Controls.Add(clean);
+        Controls.Add(console);
+        Controls.Add(porcentagem);
         Name = "Form1";
         Text = "Form1";
         ResumeLayout(false);
@@ -261,24 +281,24 @@ partial class Form1
 
     #endregion
 
-    private Button button1;
-    private TextBox textBox1;
-    private Button button4;
-    private Button button7;
-    private Button button8;
-    private Button button9;
-    private Button button10;
-    private Button button12;
-    private Button button13;
-    private Button button14;
-    private Button button15;
-    private Button button16;
-    private Button button17;
-    private Button button18;
-    private Button button19;
-    private Button button20;
-    private Button button22;
-    private Button button23;
-    private Button button24;
-    private Button button25;
+    private Button porcentagem;
+    private TextBox console;
+    private Button clean;
+    private Button divisao;
+    private Button nove;
+    private Button oito;
+    private Button sete;
+    private Button multiplicacao;
+    private Button seis;
+    private Button cinco;
+    private Button quatro;
+    private Button igual;
+    private Button soma;
+    private Button tres;
+    private Button dois;
+    private Button um;
+    private Button subtracao;
+    private Button zerozero;
+    private Button zero;
+    private Button virgula;
 }
