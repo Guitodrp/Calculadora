@@ -1,5 +1,3 @@
-using System.Linq.Expressions;
-
 namespace Calculadora;
 
 public partial class Form1 : Form
@@ -37,30 +35,48 @@ public partial class Form1 : Form
             console.Text = (Valor * valorAtual / 100).ToString();
         }
         console.Text = string.Empty;
+        operacaoAtual.Text = "%";
+
     }
     private void Divisao_Click(object sender, EventArgs e)
     {
-        Operador = Operacao.Divisao;
-        Valor = Convert.ToDecimal(console.Text);
-        console.Text = string.Empty;
+        if (!string.IsNullOrEmpty(console.Text))
+        {
+            Operador = Operacao.Divisao;
+            Valor = Convert.ToDecimal(console.Text);
+            console.Text = string.Empty;
+            operacaoAtual.Text = "/";
+        }
     }
     private void Multiplicacao_Click(object sender, EventArgs e)
     {
-        Operador = Operacao.Multiplicacao;
-        Valor = Convert.ToDecimal(console.Text);
-        console.Text = string.Empty;
+        if (!string.IsNullOrEmpty(console.Text))
+        {
+            Operador = Operacao.Multiplicacao;
+            Valor = Convert.ToDecimal(console.Text);
+            console.Text = string.Empty;
+            operacaoAtual.Text = "x";
+        }
     }
     private void Subtracao_Click(object sender, EventArgs e)
     {
-        Operador = Operacao.Subtracao;
-        Valor = Convert.ToDecimal(console.Text);
-        console.Text = string.Empty;
+        if (!string.IsNullOrEmpty(console.Text))
+        {
+            Operador = Operacao.Subtracao;
+            Valor = Convert.ToDecimal(console.Text);
+            console.Text = string.Empty;
+            operacaoAtual.Text = "-";
+        }
     }
     private void Soma_Click(object sender, EventArgs e)
     {
-        Operador = Operacao.Soma;
-        Valor = Convert.ToDecimal(console.Text);
-        console.Text = string.Empty;
+        if (!string.IsNullOrEmpty(console.Text))
+        {
+            Operador = Operacao.Soma;
+            Valor = Convert.ToDecimal(console.Text);
+            console.Text = string.Empty;
+            operacaoAtual.Text = "+";
+        }
     }
 
     #endregion
@@ -87,10 +103,12 @@ public partial class Form1 : Form
                 break;
         }
         console.Text = Resultado.ToString();
+        operacaoAtual.Text = "=";
     }
     private void Clean_Click(object sender, EventArgs e)
     {
         console.Text = string.Empty;
+        operacaoAtual.Text = string.Empty;
     }
 
     #endregion
@@ -157,9 +175,4 @@ public partial class Form1 : Form
     }
 
     #endregion
-
-    private void console_TextChanged(object sender, EventArgs e)
-    {
-
-    }
 }

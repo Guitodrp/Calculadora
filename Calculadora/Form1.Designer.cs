@@ -48,6 +48,8 @@ partial class Form1
         zerozero = new Button();
         zero = new Button();
         virgula = new Button();
+        label1 = new Label();
+        operacaoAtual = new Label();
         SuspendLayout();
         // 
         // porcentagem
@@ -63,13 +65,12 @@ partial class Form1
         // console
         // 
         console.Font = new Font("Segoe UI", 30F);
-        console.Location = new Point(11, 32);
+        console.Location = new Point(12, 25);
         console.Name = "console";
         console.ReadOnly = true;
         console.Size = new Size(290, 61);
         console.TabIndex = 3;
         console.TextAlign = HorizontalAlignment.Right;
-        console.TextChanged += console_TextChanged;
         // 
         // clean
         // 
@@ -251,11 +252,31 @@ partial class Form1
         virgula.UseVisualStyleBackColor = true;
         virgula.Click += Virgula_Click;
         // 
+        // label1
+        // 
+        label1.Location = new Point(0, 0);
+        label1.Name = "label1";
+        label1.Size = new Size(100, 23);
+        label1.TabIndex = 0;
+        // 
+        // operacaoAtual
+        // 
+        operacaoAtual.AutoSize = true;
+        operacaoAtual.Font = new Font("Segoe UI", 15F);
+        operacaoAtual.Location = new Point(250, 89);
+        operacaoAtual.Name = "operacaoAtual";
+        operacaoAtual.Size = new Size(0, 37);
+        operacaoAtual.TabIndex = 25;
+        operacaoAtual.TextAlign = ContentAlignment.MiddleRight;
+        // 
         // Form1
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
+        BackColor = SystemColors.Menu;
         ClientSize = new Size(316, 500);
+        Controls.Add(operacaoAtual);
+        Controls.Add(label1);
         Controls.Add(subtracao);
         Controls.Add(zerozero);
         Controls.Add(zero);
@@ -277,7 +298,8 @@ partial class Form1
         Controls.Add(console);
         Controls.Add(porcentagem);
         Name = "Form1";
-        Text = "Form1";
+        StartPosition = FormStartPosition.CenterScreen;
+        Text = "Calculadora";
         ResumeLayout(false);
         PerformLayout();
     }
@@ -304,4 +326,6 @@ partial class Form1
     private Button zerozero;
     private Button zero;
     private Button virgula;
+    private Label label1;
+    private Label operacaoAtual;
 }
