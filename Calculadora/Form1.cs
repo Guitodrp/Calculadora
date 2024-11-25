@@ -85,25 +85,31 @@ public partial class Form1 : Form
 
     private void Igual_Click(object sender, EventArgs e)
     {
-        decimal valorAtual = Convert.ToDecimal(console.Text);
-
-        switch (Operador)
+        if (!string.IsNullOrEmpty(console.Text))
         {
-            case Operacao.Soma:
-                Resultado = Valor + valorAtual;
-                break;
-            case Operacao.Divisao:
-                Resultado = Valor / valorAtual;
-                break;
-            case Operacao.Multiplicacao:
-                Resultado = Valor * valorAtual;
-                break;
-            case Operacao.Subtracao:
-                Resultado = Valor - valorAtual;
-                break;
+            decimal valorAtual = Convert.ToDecimal(console.Text);
+
+            switch (Operador)
+            {
+                case Operacao.Soma:
+                    Resultado = Valor + valorAtual;
+                    break;
+                case Operacao.Divisao:
+                    if (valorAtual != 0)
+                        Resultado = Valor / valorAtual;
+                    else
+                        console.Text = string.Empty;
+                    break;
+                case Operacao.Multiplicacao:
+                    Resultado = Valor * valorAtual;
+                    break;
+                case Operacao.Subtracao:
+                    Resultado = Valor - valorAtual;
+                    break;
+            }
+            console.Text = Resultado.ToString();
+            operacaoAtual.Text = "=";
         }
-        console.Text = Resultado.ToString();
-        operacaoAtual.Text = "=";
     }
     private void Clean_Click(object sender, EventArgs e)
     {
